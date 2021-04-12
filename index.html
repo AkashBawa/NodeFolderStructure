@@ -1,0 +1,15 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script>
+  var socket = io();
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  var latitude = url.searchParams.get("latitude");
+  var longitude = url.searchParams.get("longitude");
+  var userId = url.searchParams.get("userId");
+  const data = { userId, latitude, longitude };
+  socket.emit("onlineUser", data);
+</script>
+
+<h2>Socket.io Test</h2>
+
+<div id="output"></div>

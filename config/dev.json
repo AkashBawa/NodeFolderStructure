@@ -1,0 +1,6 @@
+{
+  "port": 8000,
+  "mongoUrl": "mongodb://localhost:27017/twvnk",
+  "jwtsecret": "jwtsecret",
+  "jwtexpire": 800000
+}
